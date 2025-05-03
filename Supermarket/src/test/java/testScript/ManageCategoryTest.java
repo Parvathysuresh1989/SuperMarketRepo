@@ -1,5 +1,6 @@
 package testScript;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
@@ -9,14 +10,14 @@ import utilities.FakerUtility;
 
 public class ManageCategoryTest extends Base
 {
-	@Test
+	@Test(groups= {"regression"},description="Mange category uploading image",retryAnalyzer=retry.Retry.class)
 	public void manageCategory() throws Exception
 	{
 		FakerUtility fakerutility=new FakerUtility();
 		String username=ExcelUtilities.readStringData(1, 0, "loginpage");
 		String password=ExcelUtilities.readStringData(1, 1,"loginpage");
-		String category="foodfood";
-		//String category=fakerutility.creatARandomFirstName();
+		//String category="foodfood";
+		String category=fakerutility.creatARandomFirstName();
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserName(username);
 		loginpage.enterPassword(password);
@@ -30,5 +31,7 @@ public class ManageCategoryTest extends Base
 		//managecategorypage.showOnTopMenu();
 		//managecategorypage.showOnLeftMenu();
 		managecategorypage.saveButtonClick();
+		boolean isalertdisplayed=managecategorypage.alertdisplay();
+		Assert.assertTrue(isalertdisplayed);
 	}
 }

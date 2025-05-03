@@ -39,7 +39,7 @@ public class LoginTest extends Base
 			boolean isalertdisplayed=loginpage.alertdisplay();
 			Assert.assertTrue(isalertdisplayed);
 		}
-		@Test(description="verify whether the user is not able to login using valid username and invalid password")
+		@Test(groups= {"regression"},description="verify whether the user is not able to login using valid username and invalid password")
 		public void verifyWhetherTheUserIsNotAbleToLoginUsingValidUserNameAndInValidPassword() throws Exception 
 		{
 			//String username="admin";

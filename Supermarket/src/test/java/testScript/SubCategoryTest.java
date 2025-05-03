@@ -9,7 +9,7 @@ import utilities.FakerUtility;
 
 public class SubCategoryTest extends Base
 {
-	@Test(description="adding subcategory")
+	@Test(groups= {"regression"},description="adding subcategory")
 	public void addSubCategory() throws Exception
 	{
 		FakerUtility fakerutility=new FakerUtility();
@@ -31,7 +31,7 @@ public class SubCategoryTest extends Base
 		
 		subcategorypage.clickSave();
 	}
-	@Test(description="update subcategory")
+	@Test(groups= {"regression"},description="update subcategory")
 	public void updateSubCategory() throws Exception
 	{
 		FakerUtility fakerutility=new FakerUtility();

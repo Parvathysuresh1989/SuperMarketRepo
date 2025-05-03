@@ -9,7 +9,7 @@ import utilities.ExcelUtilities;
 
 public class ManageContactTest extends Base
 {
-	@Test(description="update contact details")
+	@Test(groups= {"regression"},description="update contact details")
 	public void manageContact() throws Exception 
 	{
 		String username=ExcelUtilities.readStringData(1, 0, "loginpage");

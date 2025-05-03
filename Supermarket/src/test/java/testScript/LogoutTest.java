@@ -9,7 +9,7 @@ import utilities.ExcelUtilities;
 
 public class LogoutTest extends Base
 {
-	@Test(description="logout from website")
+	@Test(groups= {"regression"},description="logout from website")
 	public void logOutMethod() throws Exception
 	{
 		String username=ExcelUtilities.readStringData(1, 0, "loginpage");

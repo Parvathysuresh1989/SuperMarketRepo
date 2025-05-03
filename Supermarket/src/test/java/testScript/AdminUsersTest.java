@@ -11,7 +11,7 @@ import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base
 {
-	@Test
+	@Test(groups= {"regression"},description="Manage Admin users")
 	public void adminUsers() throws Exception
 	{
 		FakerUtility fakerutility=new FakerUtility();

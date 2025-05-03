@@ -10,7 +10,7 @@ import utilities.ExcelUtilities;
 public class ManageFooterTextTest extends Base
 {
 	
-	@Test(description="check if action button is present")
+	@Test(groups= {"regression"},description="check if action button is present")
 	public void checkifActionButtonIsPresent() throws Exception
 	{
 		String username=ExcelUtilities.readStringData(1, 0, "loginpage");
@@ -23,7 +23,7 @@ public class ManageFooterTextTest extends Base
 		managefootertextpage.moreInfoClick();
 		managefootertextpage.actionButtonCheck();
 	}
-	@Test(description="update address,phone and email")
+	@Test(groups= {"regression"},description="update address,phone and email")
 	public void manageFooter() throws Exception
 	{
 		String username=ExcelUtilities.readStringData(1, 0, "loginpage");

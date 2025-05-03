@@ -27,6 +27,7 @@ public class ManageCategoryPage
 	@FindBy(xpath="//input[@name='show_home' and @value='yes']")WebElement leftmenu;
 	@FindBy(xpath="//button[@name='create' and @type='submit']")WebElement save;
 	//@FindBy(xpath="//div[@class='btn btn-danger']")WebElement save;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
 	
 	public ManageCategoryPage(WebDriver driver) 
 	{
@@ -67,13 +68,19 @@ public class ManageCategoryPage
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", save);
-		save.click();
-		/*WaitUtility waitutility=new WaitUtility();
-		waitutility.waitForElementToBeClickable(driver, save);
-		//WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
-		//wait.until(ExpectedConditions.elementToBeClickable(save));
-		save.click();
+		/*WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(save));
+		save.click();*/
+		//WaitUtility waitutility=new WaitUtility();
+		//waitutility.waitForElementToBeClickable(driver, save);
+		/*WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(save));
+		save.click();*/
 		//PageUtility pageutility=new PageUtility();
 		//pageutility.javaScriptClick(save,driver);*/
+	}
+	public boolean alertdisplay()
+	{
+		return alert.isDisplayed();
 	}
 }

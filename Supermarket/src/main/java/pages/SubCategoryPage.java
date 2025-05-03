@@ -19,7 +19,8 @@ public class SubCategoryPage
 	@FindBy(xpath="//input[@name='main_img']")WebElement selectfile;
 	@FindBy(xpath="//input[@id='subcategory']")WebElement subcategory;
 	@FindBy(xpath="//button[text()='Save']")WebElement savebutton;
-	@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss' and @href='https://groceryapp.uniqassosiates.com/admin/Subcategory/edit?edit=3537&page_ad=1']")WebElement update;
+	//@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss' and @href='https://groceryapp.uniqassosiates.com/admin/Subcategory/edit?edit=3537&page_ad=1']")WebElement update;
+	@FindBy(xpath="((//a[@class='btn btn-sm btn btn-primary btncss'])[1])")WebElement update;
 	@FindBy(xpath="//button[@name='update']")WebElement updatebutton;
 	public SubCategoryPage(WebDriver driver) 
 	{
@@ -68,7 +69,9 @@ public class SubCategoryPage
 	}
 	public void updateClick()
 	{
-		update.click();
+		PageUtility pageutility=new PageUtility();
+		pageutility.javaScriptClick(update,driver);
+		//update.click();
 	}
 	public void updateButtonClick()
 	{

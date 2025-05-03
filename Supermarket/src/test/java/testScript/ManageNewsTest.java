@@ -11,7 +11,7 @@ import utilities.ExcelUtilities;
 public class ManageNewsTest extends Base
 {
 	
-	@Test(description="Adding new news")
+	@Test(groups= {"regression"},description="Adding new news")
 	public void manageNews() throws Exception
 	{
 		//String username="admin";
