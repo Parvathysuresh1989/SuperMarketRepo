@@ -7,7 +7,7 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-       <class name="testScript.ManageFooterTextTest"/>
+        <class name="testScript.ManageFooterTextTest"/>
       <class name="testScript.ManageContactTest"/>
       <class name="testScript.AdminUsersTest"/>
       <class name="testScript.ManageNewsTest"/>
