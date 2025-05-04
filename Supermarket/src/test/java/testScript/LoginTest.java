@@ -37,7 +37,7 @@ public class LoginTest extends Base
 			loginpage.enterPassword(password);
 			loginpage.clickSignIn();
 			boolean isalertdisplayed=loginpage.alertdisplay();
-			Assert.assertTrue(isalertdisplayed);
+			Assert.assertTrue(isalertdisplayed,Constants.INVALIDUSERNAME);
 		}
 		@Test(groups= {"regression"},description="verify whether the user is not able to login using valid username and invalid password")
 		public void verifyWhetherTheUserIsNotAbleToLoginUsingValidUserNameAndInValidPassword() throws Exception 
@@ -51,7 +51,7 @@ public class LoginTest extends Base
 			loginpage.enterPassword(password);
 			loginpage.clickSignIn();
 			boolean isalertdisplayed=loginpage.alertdisplay();
-			Assert.assertTrue(isalertdisplayed);
+			Assert.assertTrue(isalertdisplayed,Constants.INVALIDPASSWORD);
 		}
 		@Test(description="verify whether user is not able to login using invalid username and invalid password")
 		public void verifyWhetherTheUserIsNotAbleToLoginUsingInValidUserNameAndInValidPassword() throws Exception 
@@ -65,7 +65,7 @@ public class LoginTest extends Base
 			loginpage.enterPassword(password);
 			loginpage.clickSignIn();
 			boolean isalertdisplayed=loginpage.alertdisplay();
-			Assert.assertTrue(isalertdisplayed);
+			Assert.assertTrue(isalertdisplayed,Constants.INVALIDUSERNAMEANDPASSWORD);
 		}
 		
 
